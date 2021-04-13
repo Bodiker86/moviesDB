@@ -9,15 +9,21 @@ let strObj = new String(str);
 console.dir([1,2,3]);
 
 const soldier = {
-    health: 400,
-    armor: 100
+     health: 400,
+    armor: 100,
+    sayHello: function () {
+        console.log("Hello");
+    }
 };
 
-const jonh = {
-    health: 100
-};
+const jonh = Object.create(soldier);
 
-jonh._proto_ = soldier;
+// const jonh = {
+//     health: 100
+// };
 
-console.log(jonh.armor);
+Object.setPrototypeOf(jonh, soldier);
+// jonh._proto_ = soldier;
 
+// console.log(jonh.armor);
+jonh.sayHello();
