@@ -1,39 +1,23 @@
- "Use strict";
+"Use strict";
 
-const  options = {
-    name: 'test',
-    width: 1024,
-    heigth: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
-    makeTest: function(){
-        console.log('Test');
-    }
+let str = "some";
+let strObj = new String(str);
+
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+
+console.dir([1,2,3]);
+
+const soldier = {
+    health: 400,
+    armor: 100
 };
 
-options.makeTest();
+const jonh = {
+    health: 100
+};
 
-const {border, bg} = options.colors;
+jonh._proto_ = soldier;
 
-// console.log(Object.keys(options));
+console.log(jonh.armor);
 
-// console.log (options.name);
-
-// console.log(options);
-
-// let counter = 0;
-// for (let key in options) {
-//     if (typeof(options[key]) === 'object') {
-//         for (let i in options [key]) {
-//             console.log(`Свойства ${key} имеит значения ${options [key] [i]}`);
-//          }
-//     }  else  {
-//         console.log(`Свойства ${key} имеит значения ${options [key]}`);
-//         counter++;
-//     }
-    
-// }
-//   console.log (counter);
-  
