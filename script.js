@@ -1,29 +1,23 @@
 "Use strict";
 
-let str = "some";
-let strObj = new String(str);
+// 1)
+console.log(typeof(String(null)));
+console.log(typeof(String(4)));
 
-// console.log(typeof(str));
-// console.log(typeof(strObj));
+// 2)
+console.log(typeof(5 + ''));
 
-console.dir([1,2,3]);
+const num = 5;
 
-const soldier = {
-     health: 400,
-    armor: 100,
-    sayHello: function () {
-        console.log("Hello");
-    }
-};
+console.log ("https://vk.com/catalog/"+ num);
 
-const jonh = Object.create(soldier);
+const fontSize = 26 + 'px';
 
-// const jonh = {
-//     health: 100
-// };
+// To Number
+console.log(typeof(Number('4')));
 
-Object.setPrototypeOf(jonh, soldier);
-// jonh._proto_ = soldier;
+// 2)
+console.log(typeof(+'5'));
 
-// console.log(jonh.armor);
-jonh.sayHello();
+// 3)
+console.log(typeof(parseInt("15px", 10)));
